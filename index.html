@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>InfinitePay Web App — Case Martech</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
   :root {
-    --green:#00E770; --dark:#0a0a0a; --surface:#111111; --surface2:#181818;
-    --surface3:#222222; --border:#2a2a2a; --text:#f0f0f0; --text-muted:#888;
-    --text-dim:#555; --amber:#F5A623; --red:#FF4D4D; --blue:#4D9FFF;
+    --green:#E8B923; --dark:#0a0a0a; --surface:#111111; --surface2:#181818;
+    --surface3:#222222; --border:#2a2a2a; --text:#ffffff; --text-muted:#888;
+    --text-dim:#555; --amber:#E8B923; --red:#FF4D4D; --blue:#4D9FFF;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;max-width:900px;margin:0 auto;padding:60px 32px 120px}
+  body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;max-width:900px;margin:0 auto;padding:60px 32px 120px;overflow-x:hidden}
   .header{border-bottom:1px solid var(--border);padding-bottom:40px;margin-bottom:56px}
   .eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:20px;display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--green)}
-  h1{font-family:'Syne',sans-serif;font-size:clamp(30px,5vw,48px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+  h1{font-family:'Outfit',sans-serif;font-size:clamp(30px,5vw,48px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
   h1 span{color:var(--green)}
   .subtitle{color:var(--text-muted);font-size:15px;max-width:600px;font-weight:300}
   .meta{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap}
@@ -25,8 +25,8 @@
   .section{margin-bottom:64px}
   .section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px;display:flex;align-items:center;gap:12px}
   .section-label .num{color:var(--green)}
-  h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:16px}
-  h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:600;margin-bottom:10px;color:var(--text)}
+  h2{font-family:'Outfit',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:16px}
+  h3{font-family:'Outfit',sans-serif;font-size:16px;font-weight:600;margin-bottom:10px;color:var(--text)}
   p{color:#bbb;margin-bottom:14px;font-weight:300}
   p:last-child{margin-bottom:0}
   strong{color:var(--text);font-weight:500}
@@ -48,16 +48,16 @@
   .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
   .context-card{background:var(--surface);border:1px solid var(--border);padding:18px 20px}
   .context-card-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
-  .context-card-value{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px}
+  .context-card-value{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px}
   .context-card p{font-size:12px;color:#777;margin:0;line-height:1.5}
 
   /* REVENUE CHAIN */
   .revenue-chain{display:flex;margin:24px 0;overflow-x:auto}
   .chain-item{flex:1;min-width:110px;background:var(--surface2);border:1px solid var(--border);border-right:none;padding:16px 12px;text-align:center}
   .chain-item:last-child{border-right:1px solid var(--border)}
-  .chain-item.hl{background:#0d1f13;border-color:var(--green);border-right:1px solid var(--green)}
+  .chain-item.hl{background:#1a1400;border-color:var(--green);border-right:1px solid var(--green)}
   .chain-item.hl + .chain-item{border-left:none}
-  .chain-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;margin-bottom:6px}
+  .chain-name{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;margin-bottom:6px}
   .chain-item.hl .chain-name{color:var(--green)}
   .chain-desc{font-size:11px;color:var(--text-dim);line-height:1.4}
   .chain-margin{font-family:'DM Mono',monospace;font-size:10px;color:var(--amber);margin-top:6px}
@@ -68,14 +68,13 @@
   .voc-quote{font-size:13px;color:#ccc;font-style:italic;font-weight:300;line-height:1.5}
   .voc-source{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-dim);white-space:nowrap;padding-top:2px;letter-spacing:.05em}
 
-  /* FUNNEL */
   .funnel{display:flex;flex-direction:column;gap:2px;margin:28px 0}
   .funnel-step{background:var(--surface2);border:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
-  .funnel-step.hl{background:#0d1f13;border-color:var(--green)}
-  .funnel-step.hl::after{content:'← FOCO';position:absolute;right:-68px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--green)}
-  .step-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:600}
+  .funnel-step.hl{background:#1a1400;border-color:var(--green)}
+  .funnel-step.hl::after{display:none}
+  .step-name{font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;min-width:0}
   .funnel-step.hl .step-name{color:var(--green)}
-  .step-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-align:right;flex-shrink:0}
+  .step-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-align:right;flex-shrink:1;min-width:0}
   .step-sub{font-size:10px;color:var(--red)}
   .funnel-arrow{text-align:center;color:var(--text-dim);font-size:11px;font-family:'DM Mono',monospace;padding:2px 0}
 
@@ -84,8 +83,8 @@
   .rice-table th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--surface3);font-weight:400}
   .rice-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:#bbb;font-weight:300;vertical-align:top}
   .rice-table tr:last-child td{border-bottom:none}
-  .rice-table td:first-child{font-family:'Syne',sans-serif;font-weight:600;font-size:13px;color:var(--text)}
-  .rice-table tr.winner td{background:#0d1f13}
+  .rice-table td:first-child{font-family:'Outfit',sans-serif;font-weight:600;font-size:13px;color:var(--text)}
+  .rice-table tr.winner td{background:#1a1400}
   .rice-table tr.winner td:first-child{color:var(--green)}
   .score-hi{color:var(--green);font-family:'DM Mono',monospace;font-weight:400}
   .score-mid{color:var(--amber);font-family:'DM Mono',monospace;font-weight:400}
@@ -95,8 +94,8 @@
   .hypothesis-grid{display:grid;gap:14px;margin:24px 0}
   .hypothesis-card{background:var(--surface);border:1px solid var(--border);padding:20px 24px}
   .hyp-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
-  .hyp-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);background:#0d1f13;border:1px solid #1a3a25;padding:4px 8px;flex-shrink:0;margin-top:2px}
-  .hyp-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px}
+  .hyp-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);background:#1a1400;border:1px solid rgba(232,185,35,0.25);padding:4px 8px;flex-shrink:0;margin-top:2px}
+  .hyp-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:15px}
   .hyp-body{font-size:14px;color:#aaa;font-weight:300;margin:0}
   .hyp-tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
   .tag-pill{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border:1px solid var(--border);color:var(--text-muted);letter-spacing:.05em}
@@ -117,21 +116,21 @@
   .wf-nav-item{background:var(--surface3);border:1px solid var(--border);font-size:10px;color:var(--text-dim);padding:4px 10px;font-family:'DM Mono',monospace}
   .wf-card{background:var(--surface3);border:1px solid var(--border);padding:12px;margin-bottom:8px}
   .wf-card-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-  .wf-card-val{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text-muted)}
+  .wf-card-val{font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;color:var(--text-muted)}
   .wf-empty{text-align:center;padding:20px 0;color:var(--text-dim);font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.08em}
-  .wf-question{background:#0d1f13;border:1px solid var(--green);padding:14px;margin-bottom:10px}
+  .wf-question{background:#1a1400;border:1px solid var(--green);padding:14px;margin-bottom:10px}
   .wf-q-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-  .wf-q-text{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--text);margin-bottom:10px}
+  .wf-q-text{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--text);margin-bottom:10px}
   .wf-options{display:flex;flex-direction:column;gap:5px}
   .wf-opt{background:var(--surface2);border:1px solid var(--border);padding:7px 10px;font-size:12px;color:#bbb;font-weight:300}
-  .wf-cta{background:var(--green);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:12px;padding:10px;text-align:center;margin-top:8px}
+  .wf-cta{background:var(--green);color:var(--dark);font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;padding:10px;text-align:center;margin-top:8px}
   .wf-annotation{font-size:11px;color:var(--amber);font-family:'DM Mono',monospace;margin-top:8px;padding:6px 10px;border:1px solid #3a2800;background:#1f1600}
 
   /* EXP TABLE */
   .exp-block{background:var(--surface);border:1px solid var(--border);margin:24px 0;overflow:hidden}
   .exp-header{background:var(--surface3);padding:14px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-  .exp-header-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px}
-  .exp-badge{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;background:#0d1f13;color:var(--green);border:1px solid #1a3a25;letter-spacing:.08em}
+  .exp-header-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:14px}
+  .exp-badge{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;background:#1a1400;color:var(--green);border:1px solid rgba(232,185,35,0.25);letter-spacing:.08em}
   .exp-row{display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--border)}
   .exp-row:last-child{border-bottom:none}
   .exp-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase;padding:16px 20px 16px 24px;border-right:1px solid var(--border);display:flex;align-items:flex-start}
@@ -146,7 +145,7 @@
   .track-table td:first-child{color:var(--green)}
   .track-star{color:var(--green)}
   .track-type{display:inline-block;font-size:9px;padding:2px 6px;border:1px solid;letter-spacing:.06em}
-  .track-type.activation{border-color:var(--green);color:var(--green);background:#0d1f13}
+  .track-type.activation{border-color:var(--green);color:var(--green);background:#1a1400}
   .track-type.exposure{border-color:var(--blue);color:var(--blue);background:#001833}
   .track-type.engagement{border-color:var(--amber);color:var(--amber);background:#1f1600}
 
@@ -154,7 +153,7 @@
   .metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
   .metric-card{background:var(--surface);border:1px solid var(--border);padding:20px}
   .metric-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px}
-  .metric-primary{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px}
+  .metric-primary{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px}
   .metric-desc{font-size:12px;color:var(--text-muted);font-weight:300}
 
   /* TIMELINE */
@@ -163,7 +162,7 @@
   .timeline-item:last-child{margin-bottom:0}
   .timeline-item::before{content:'';position:absolute;left:-29px;top:6px;width:8px;height:8px;background:var(--surface3);border:1px solid var(--green)}
   .timeline-week{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
-  .timeline-title{font-family:'Syne',sans-serif;font-weight:600;font-size:14px;margin-bottom:4px;color:var(--text)}
+  .timeline-title{font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;margin-bottom:4px;color:var(--text)}
   .timeline-desc{font-size:13px;color:#888;font-weight:300;margin:0}
 
   /* DECISION */
@@ -171,7 +170,7 @@
   .decision-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
   .decision-row:last-child{margin-bottom:0}
   .decision-if{font-family:'DM Mono',monospace;font-size:11px;padding:3px 10px;border:1px solid var(--border);color:var(--text-muted);flex-shrink:0;letter-spacing:.06em;margin-top:1px;white-space:nowrap}
-  .decision-if.green{border-color:var(--green);color:var(--green);background:#0d1f13}
+  .decision-if.green{border-color:var(--green);color:var(--green);background:#1a1400}
   .decision-if.amber{border-color:var(--amber);color:var(--amber);background:#1f1600}
   .decision-if.red{border-color:var(--red);color:var(--red);background:#1f0000}
   .decision-text{font-size:14px;color:#bbb;font-weight:300;padding-top:2px}
@@ -179,10 +178,10 @@
   /* RISK */
   .risk-grid{display:grid;gap:10px;margin:20px 0}
   .risk-item{display:grid;grid-template-columns:180px 1fr 80px;gap:16px;background:var(--surface);border:1px solid var(--border);padding:14px 20px;align-items:center}
-  .risk-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:600}
+  .risk-name{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600}
   .risk-mitigation{font-size:13px;color:#888;font-weight:300}
   .risk-level{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-align:center;padding:4px 0;border:1px solid}
-  .risk-level.low{color:var(--green);border-color:var(--green);background:#0d1f13}
+  .risk-level.low{color:var(--green);border-color:var(--green);background:#1a1400}
   .risk-level.mid{color:var(--amber);border-color:var(--amber);background:#1f1600}
 
   /* FOOTNOTES */
@@ -194,11 +193,10 @@
   hr{border:none;border-top:1px solid var(--border);margin:48px 0}
   .footer{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
   .footer-left{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-dim)}
-  .footer-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text-muted)}
+  .footer-name{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:var(--text-muted)}
 
   @media(max-width:640px){
     body{padding:40px 20px 80px}
-    .funnel-step.hl::after{display:none}
     .metrics-row,.wireframe-row,.context-grid{grid-template-columns:1fr}
     .risk-item{grid-template-columns:1fr;gap:8px}
     .exp-row{grid-template-columns:1fr}
@@ -211,8 +209,8 @@
   /* FINDINGS / HANDS-ON */
   .finding-block{background:var(--surface);border:1px solid var(--border);margin:20px 0;overflow:hidden}
   .finding-header{background:var(--surface3);padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .finding-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:#0d1f13;border:1px solid #1a3a25;padding:3px 10px;letter-spacing:.08em;flex-shrink:0}
-  .finding-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;flex:1}
+  .finding-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:#1a1400;border:1px solid rgba(232,185,35,0.25);padding:3px 10px;letter-spacing:.08em;flex-shrink:0}
+  .finding-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;flex:1}
   .finding-severity{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border:1px solid;letter-spacing:.06em;flex-shrink:0}
   .finding-severity.mid{color:var(--amber);border-color:var(--amber);background:#1f1600}
   .finding-severity.low{color:var(--blue);border-color:var(--blue);background:#001833}
@@ -237,7 +235,7 @@
   .fs-row{display:grid;grid-template-columns:36px 200px 1fr;gap:16px;padding:12px 20px;border-bottom:1px solid var(--border);align-items:start}
   .fs-row:last-child{border-bottom:none}
   .fs-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);padding-top:1px}
-  .fs-finding{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--text)}
+  .fs-finding{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--text)}
   .fs-impact{font-size:13px;color:#888;font-weight:300}
 
 
@@ -246,8 +244,8 @@
   .bench-table th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);padding:10px 14px;border-bottom:1px solid var(--border);background:var(--surface3);text-align:left;font-weight:400}
   .bench-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:#bbb;font-weight:300;vertical-align:top;font-size:13px}
   .bench-table tr:last-child td{border-bottom:none}
-  .bench-table td:first-child{font-family:'Syne',sans-serif;font-weight:600;font-size:13px;color:var(--text)}
-  .bench-table tr.ip-row td{background:#0d1f13}
+  .bench-table td:first-child{font-family:'Outfit',sans-serif;font-weight:600;font-size:13px;color:var(--text)}
+  .bench-table tr.ip-row td{background:#1a1400}
   .bench-table tr.ip-row td:first-child{color:var(--green)}
   .ok-cell{color:var(--green)}
   .mid-cell{color:var(--amber)}
@@ -255,7 +253,7 @@
 
   /* INTERNAL SIGNAL */
   .signal-block{background:var(--surface);border:1px solid var(--border);padding:18px 20px;margin:16px 0;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
-  .signal-icon{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:#0d1f13;border:1px solid #1a3a25;padding:4px 10px;white-space:nowrap;letter-spacing:.08em;margin-top:1px}
+  .signal-icon{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:#1a1400;border:1px solid rgba(232,185,35,0.25);padding:4px 10px;white-space:nowrap;letter-spacing:.08em;margin-top:1px}
   .signal-body{font-size:13px;color:#bbb;font-weight:300}
   .signal-body strong{color:var(--text);font-size:14px;display:block;margin-bottom:4px}
 
@@ -264,7 +262,7 @@
   .discovery-block{background:#0a0f0a;border:2px solid var(--green);padding:28px 32px;margin:0 0 40px 0}
   .discovery-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:flex;align-items:center;gap:10px}
   .discovery-eyebrow::before{content:'';width:20px;height:1px;background:var(--green);display:inline-block}
-  .discovery-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:14px;letter-spacing:-.01em}
+  .discovery-title{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;margin-bottom:14px;letter-spacing:-.01em}
   .discovery-title span{color:var(--green)}
   .discovery-body{font-size:14px;color:#bbb;font-weight:300;line-height:1.7;margin-bottom:16px}
   .discovery-body strong{color:var(--text);font-weight:500}
@@ -283,7 +281,7 @@
 <div class="header">
   <div class="eyebrow">Case Martech · InfinitePay Web App</div>
   <h1>Onde está o<br><span>Gap de Ativação</span></h1>
-  <p class="subtitle">Identificando e validando a oportunidade de maior alavancagem na jornada do usuário da InfinitePay — do contexto do negócio à instrumentação do experimento.</p>
+  <p class="subtitle">Identificando e validando a oportunidade de maior alavancagem na jornada do usuário da InfinitePay, do contexto do negócio à instrumentação do experimento.</p>
   <div class="meta">
     <div class="meta-item">ÁREA <span>Ativação pós-cadastro (mobile)</span></div>
     <div class="meta-item">MÉTODO <span>Experimento A/B</span></div>
@@ -298,9 +296,9 @@
   <div class="section-label"><span class="num">00</span> Contexto da empresa</div>
   <h2>Quem é a InfinitePay e como ela cresce</h2>
 
-  <p>A <strong>InfinitePay</strong> é a plataforma de pagamentos da CloudWalk — uma fintech brasileira fundada em 2013 que atende hoje mais de 6 milhões de microempreendedores em todos os 5.570 municípios do Brasil. O produto central: permitir que qualquer pessoa aceite cartão, Pix e boleto, receba rápido e gerencie as finanças do negócio em um único app.</p>
+  <p>A <strong>InfinitePay</strong> é a plataforma de pagamentos da CloudWalk, uma fintech brasileira fundada em 2013 que atende mais de 6 milhões de microempreendedores em todos os 5.570 municípios do Brasil. O produto central é simples: permitir que qualquer pessoa aceite cartão, Pix e boleto, receba rápido e gerencie as finanças do negócio em um único app.</p>
 
-  <p>O que diferencia a InfinitePay no mercado não é só o preço — é o modelo operacional. Com menos de 700 funcionários, a empresa gera mais de R$ 5 bilhões de receita anual. Isso só é possível porque o crescimento é <strong>100% digital e baseado em produto</strong>: sem força de vendas, sem call centers, sem agências. Cada novo lojista é adquirido via canal orgânico ou pago, ativado pelo próprio produto e retido pelos serviços que passa a depender no dia a dia.</p>
+  <p>O que diferencia a InfinitePay no mercado não é só o preço. É o modelo operacional. Com menos de 700 funcionários, a empresa gera mais de R$ 5 bilhões de receita anual. Isso só é possível porque o crescimento é 100% digital e orientado pelo produto: sem força de vendas, sem call centers, sem agências. Cada novo lojista é adquirido via canal orgânico ou pago, ativado pelo próprio produto e retido pelos serviços dos quais passa a depender no dia a dia.</p>
 
   <div class="context-grid">
     <div class="context-card">
@@ -316,16 +314,16 @@
     <div class="context-card">
       <div class="context-card-label">Modelo de crescimento</div>
       <div class="context-card-value">PLG</div>
-      <p>Product-Led Growth — o produto é simultaneamente canal de aquisição, ativação e retenção</p>
+      <p>Product-Led Growth: o produto é simultaneamente canal de aquisição, ativação e retenção</p>
     </div>
     <div class="context-card">
       <div class="context-card-label">Equipe</div>
       <div class="context-card-value">~600</div>
-      <p>Revenue per employee entre os mais altos do mundo no setor — modelo lean viabilizado por IA</p>
+      <p>Revenue per employee entre os mais altos do mundo no setor, modelo lean viabilizado por IA</p>
     </div>
   </div>
 
-  <p>Nesse modelo, cada etapa da jornada do usuário precisa funcionar de forma quase autônoma — sem vendedor para empurrar, sem atendente para guiar. <strong>O produto faz esse trabalho sozinho.</strong> É esse contexto que torna a análise da jornada do app mobile crítica.</p>
+  <p>Nesse modelo, cada etapa da jornada do usuário precisa funcionar de forma quase autônoma: sem vendedor para empurrar, sem atendente para guiar. O produto faz esse trabalho. É esse contexto que torna a análise da jornada no app mobile tão relevante.</p>
 </div>
 
 
@@ -361,10 +359,10 @@
 
   <div class="callout">
     <div class="callout-label">A lógica de desbloqueio</div>
-    <p>Sem a primeira transação, não há histórico. Sem histórico, não há acesso a antecipação, crédito ou análise de fluxo de caixa. Um lojista que cadastra e nunca transaciona gera apenas custo de aquisição — sem nenhuma receita em nenhuma linha.</p>
+    <p>Sem a primeira transação, não há histórico. Sem histórico, o lojista não acessa antecipação, crédito ou análise de fluxo de caixa. Um cadastro sem transação gera apenas custo de aquisição, sem nenhuma receita em nenhuma linha.</p>
+    <p>Melhorar a taxa de ativação não aumenta só o volume de transações. Ela alarga o funil para todas as linhas de receita downstream. Num negócio PLG, esse é o ponto de maior impacto financeiro.</p>
   </div>
 
-  <p>Melhorar a taxa de ativação não aumenta apenas o volume de transações — ela alarga o funil para <em>todas</em> as linhas de receita downstream. Num negócio PLG, este é o ponto de maior alavancagem financeira.</p>
 </div>
 
 
@@ -373,9 +371,9 @@
   <div class="section-label"><span class="num">02</span> O app mobile na jornada</div>
   <h2>Onde o lojista realmente opera</h2>
 
-  <p>A InfinitePay opera via app mobile — é pelo celular que o lojista cadastra, vende em tempo real, ativa o InfiniteTap e acompanha transações. O briefing menciona "Web App experience": o hands-on revelou que essa superfície não existe hoje como produto funcional independente (ver Seção 04b e o callout abaixo). O produto real onde o lojista opera é o <strong>app mobile</strong>.</p>
+  <p>A InfinitePay funciona pelo app mobile. É pelo celular que o lojista cadastra, vende em tempo real, ativa o InfiniteTap e acompanha transações. O briefing menciona "Web App experience": o hands-on revelou que essa superfície não existe como produto funcional independente (ver Seção 04b e o callout abaixo). O produto real onde o lojista opera é o app mobile.</p>
 
-  <p>O usuário que abre o app logo após o cadastro está num momento de alta intenção deliberada: acabou de decidir usar a InfinitePay e quer fazer a primeira venda. Se o produto não oferece um próximo passo claro nesse momento, ele sai sem agir — e a janela de ativação começa a fechar.</p>
+  <p>O usuário que abre o app logo após o cadastro está num momento de alta intenção: acabou de decidir usar a InfinitePay e quer fazer a primeira venda. Se o produto não oferece um próximo passo claro nesse momento, o usuário sai sem agir e a janela de ativação começa a fechar.</p>
 
   <div class="funnel">
     <div class="funnel-step">
@@ -407,13 +405,13 @@
     </div>
   </div>
 
-  <p>As etapas 1 e 2 são responsabilidade de aquisição. As etapas 4 e 5 dependem da 3 acontecer. O intervalo entre cadastro e primeira transação é onde mais valor é perdido silenciosamente — o usuário existe na base, já demonstrou intenção, e ainda assim não gera receita.</p>
+  <p>As etapas 1 e 2 são responsabilidade de aquisição. As etapas 4 e 5 dependem da 3 acontecer. O intervalo entre cadastro e primeira transação é onde mais valor é perdido silenciosamente: o usuário existe na base, já demonstrou intenção, e ainda assim não gera receita.</p>
 
-  <p>Contexto de mercado: <strong>40–50% dos usuários de fintech abandonam ainda no KYC</strong>, e mais de 20% abandonam mesmo após completá-lo, antes de fazer a primeira ação de valor.<sup>[1]</sup> A InfinitePay tem um KYC comprovadamente mais rápido que a média — o gap pós-cadastro é o que merece atenção agora.</p>
+  <p>Contexto de mercado: <strong>40–50% dos usuários de fintech abandonam ainda no KYC</strong>, e mais de 20% abandonam mesmo após completá-lo, antes de fazer a primeira ação de valor.<sup>[1]</sup> A InfinitePay tem um KYC comprovadamente mais rápido que a média. O gap pós-cadastro é o que merece atenção agora.</p>
 
   <div class="callout blue">
     <div class="callout-label">Nota sobre o "Web App" do briefing</div>
-    <p>O briefing menciona "Web App experience". Ao tentar validar a existência de uma superfície web funcional para o lojista, o hands-on revelou que hoje ela não existe como produto independente — o domínio app.infinitepay.io redireciona para o download do app mobile, e o site infinitepay.io é uma página de marketing, não uma interface de cliente. Isso levanta duas hipóteses: ou o Web App é uma superfície em construção, ou o briefing se refere ao próprio app mobile em contextos de uso não-presencial. Em ambos os casos, <strong>o produto real onde o lojista opera é o app mobile</strong> — e é onde o gap de ativação precisa ser investigado. Ver Seção 04b para o registro completo desse achado.</p>
+    <p>O briefing menciona "Web App experience". Ao tentar validar a existência de uma superfície web funcional para o lojista, o hands-on revelou que hoje ela não existe como produto independente: o domínio app.infinitepay.io redireciona para o download do app mobile, e o site infinitepay.io é uma página de marketing, não uma interface de cliente. Isso levanta duas hipóteses: ou o Web App é uma superfície em construção, ou o briefing se refere ao próprio app mobile em contextos de uso não-presencial. Em ambos os casos, <strong>o produto real onde o lojista opera é o app mobile</strong>, e é onde o gap de ativação precisa ser investigado. Ver Seção 04b para o registro completo desse achado.</p>
   </div>
 </div>
 
@@ -423,7 +421,7 @@
   <div class="section-label"><span class="num">03</span> Voz do cliente</div>
   <h2>O que os lojistas dizem sobre o primeiro momento</h2>
 
-  <p>Antes de propor qualquer solução, vasculhei fontes primárias de feedback de usuários reais — Reclame Aqui, Google Play e Apple App Store — com foco em reclamações dos primeiros dias de uso. Três padrões se repetem:</p>
+  <p>Antes de propor qualquer solução, vasculhei fontes primárias de feedback de usuários reais: Reclame Aqui, Google Play e Apple App Store, com foco em reclamações dos primeiros dias de uso. Três padrões se repetem:</p>
 
   <div class="voc-strip">
     <div class="voc-item">
@@ -440,11 +438,11 @@
     </div>
   </div>
 
-  <p>Os três relatos apontam para o mesmo ponto: <strong>a primeira tentativa de gerar valor falha sem explicação clara</strong>. O usuário não entende se é um problema dele, do sistema ou do produto — e o suporte via bot não resolve. Isso é abandono por fricção, não por falta de intenção.</p>
+  <p>Os três relatos apontam para o mesmo ponto: <strong>a primeira tentativa de gerar valor falha sem explicação clara</strong>. O usuário não entende se é um problema dele, do sistema ou do produto, e o suporte via bot não resolve. Isso é abandono por fricção, não por falta de intenção.</p>
 
   <div class="callout amber">
     <div class="callout-label">Padrão identificado no VoC</div>
-    <p>Um subconjunto de reclamações envolve a <strong>primeira venda negada pelo sistema de antifraude</strong> sem comunicação clara do motivo — o usuário tenta transacionar logo após o cadastro, o sistema bloqueia a transação como "atípica", e não há feedback acionável. Esse é um atrito específico do primeiro momento de uso que o fluxo de ativação pode endereçar com comunicação de expectativa.</p>
+    <p>Um subconjunto de reclamações envolve a <strong>primeira venda negada pelo sistema de antifraude</strong> sem comunicação clara do motivo: o usuário tenta transacionar logo após o cadastro, o sistema bloqueia a transação como "atípica", e não há feedback acionável. Esse é um atrito específico do primeiro momento de uso que o fluxo de ativação pode endereçar com comunicação de expectativa.</p>
   </div>
 </div>
 
@@ -454,7 +452,7 @@
   <div class="section-label"><span class="num">04</span> Priorização</div>
   <h2>Por que esse ponto, e não outro</h2>
 
-  <p>O briefing é deliberadamente aberto. Antes de escolher onde agir, mapeei as hipóteses cobrindo o funil completo e apliquei um modelo RICE simplificado para tornar a escolha explícita — e auditável.</p>
+  <p>O briefing é deliberadamente aberto. Antes de escolher onde agir, mapeei as hipóteses cobrindo o funil completo e apliquei um modelo RICE simplificado para tornar a escolha explícita e auditável.</p>
 
   <table class="rice-table">
     <thead>
@@ -519,9 +517,9 @@
     </tbody>
   </table>
 
-  <p><strong>Por que a #1 vence a #2 (KYC)?</strong> O abandono de KYC exigiria alinhamento com compliance e mudanças no fluxo regulatório — escopo que ultrapassa o prazo e a autonomia de um primeiro teste. O fluxo pós-cadastro é inteiramente de produto e UX, sem restrição regulatória, e o impacto em receita é imediato: mais lojistas ativados significa mais MDR, mais elegibilidade para antecipação, mais dados para crédito. A hipótese de KYC fica como segundo experimento natural após validar a #1.</p>
+  <p><strong>Por que a #1 vence a #2 (KYC)?</strong> O abandono de KYC exigiria alinhamento com compliance e mudanças no fluxo regulatório, escopo que ultrapassa o prazo e a autonomia de um primeiro teste. O fluxo pós-cadastro é inteiramente de produto e UX, sem restrição regulatória, e o impacto em receita é imediato: mais lojistas ativados significa mais MDR, mais elegibilidade para antecipação, mais dados para crédito. A hipótese de KYC fica como segundo experimento natural após validar a #1.</p>
 
-  <p><strong>Por que a #3 (reengajamento) não vence?</strong> Notificações de reengajamento tratam o sintoma — o usuário que saiu. O fluxo de ativação trata a causa — o usuário que está presente mas não encontrou o próximo passo óbvio. Resolver a causa é sempre preferível, e o momento de maior abertura para orientação é exatamente o pós-cadastro, antes do hábito de "navegar por conta própria" se consolidar.</p>
+  <p><strong>Por que a #3 (reengajamento) não vence?</strong> Notificações de reengajamento tratam o sintoma: o usuário que saiu. O fluxo de ativação trata a causa: o usuário que está presente mas não encontrou o próximo passo óbvio. Resolver a causa é sempre preferível, e o momento de maior abertura para orientação é exatamente o pós-cadastro, antes do hábito de "navegar por conta própria" se consolidar.</p>
 </div>
 
 
@@ -537,9 +535,9 @@
     <div class="discovery-eyebrow">Achado #0 — Descoberta que mudou o case</div>
     <div class="discovery-title">O Web App não tem cadastro próprio.<br><span>A premissa inicial estava errada.</span></div>
     <div class="discovery-body">
-      <p>Ao começar o hands-on, parti da premissa de que o Web App mencionado no briefing era uma superfície funcional com fluxo próprio de cadastro e ativação. Quando tentei acessar <strong>app.infinitepay.io</strong> sem estar logado, encontrei apenas um QR code com a instrução: <strong>"Abra o app, escaneie o QR Code e entre na InfinitePay."</strong> O site <strong>infinitepay.io</strong> é uma página de marketing — CTAs de "Baixar app" e "Compre agora", sem área logada para o lojista.</p>
-      <p>Conclusão: <strong>não existe Web App funcional hoje</strong>. O domínio app.infinitepay.io redireciona para o download do app mobile. Toda a jornada do lojista — do cadastro à primeira transação — acontece no app. O briefing provavelmente se refere a uma superfície em construção, ou ao próprio app mobile em contextos de uso não-presencial.</p>
-      <p>Esse achado <strong>redirecionou o case para onde o produto realmente está</strong>: o app mobile. Não é um desvio do briefing — é a consequência direta de investigar o produto antes de propor solução. Um experimento no Web App seria um experimento numa superfície sem usuários. As seções seguintes documentam o que o hands-on no app mobile revelou.</p>
+      <p>Ao começar o hands-on, parti da premissa de que o Web App mencionado no briefing era uma superfície funcional com fluxo próprio de cadastro e ativação. Quando tentei acessar <strong>app.infinitepay.io</strong> sem estar logado, encontrei apenas um QR code com a instrução: <strong>"Abra o app, escaneie o QR Code e entre na InfinitePay."</strong> O site <strong>infinitepay.io</strong> é uma página de marketing. Os CTAs de "Baixar app" e "Compre agora", sem área logada para o lojista.</p>
+      <p>Conclusão: <strong>não existe Web App funcional hoje</strong>. O domínio app.infinitepay.io redireciona para o download do app mobile. Toda a jornada do lojista, do cadastro à primeira transação, acontece no app. O briefing provavelmente se refere a uma superfície em construção, ou ao próprio app mobile em contextos de uso não-presencial.</p>
+      <p>Esse achado <strong>redirecionou o case para onde o produto realmente está</strong>: o app mobile. Não é um desvio do briefing. É a consequência direta de investigar o produto antes de propor solução. Um experimento no Web App seria um experimento numa superfície sem usuários. As seções seguintes documentam o que o hands-on no app mobile revelou.</p>
     </div>
 
     <div class="discovery-imgs">
@@ -556,11 +554,11 @@
     </div>
 
     <div class="discovery-meta">
-      "Fui validar o Web App antes de fechar o documento. Descobri que ele não existe como produto funcional — o site redireciona para o app mobile. Isso redirecionou o case inteiro para o produto real. Documentei porque o processo importa tanto quanto a conclusão — e é exatamente o que o briefing pede: 'the focus is less on arriving at a final answer and more on how you would move forward.'"
+      "Fui validar o Web App antes de fechar o documento. Descobri que ele não existe como produto funcional: o site redireciona para o app mobile. Isso redirecionou o case inteiro para o produto real. Documentei porque o processo importa tanto quanto a conclusão, e é exatamente o que o briefing pede: 'the focus is less on arriving at a final answer and more on how you would move forward.'"
     </div>
   </div>
 
-  <p>Com a arquitetura real mapeada, o hands-on no mobile revelou mais três atritos específicos no fluxo de ativação que reforçam — e refinam — a hipótese central.</p>
+  <p>Com a arquitetura real mapeada, o hands-on no mobile revelou mais três atritos específicos no fluxo de ativação que reforçam e refinam a hipótese central.</p>
 
   <!-- ACHADO #1 -->
   <div class="finding-block">
@@ -571,10 +569,10 @@
     </div>
     <div class="finding-body">
       <p>Ao pedir ajuda para criar um link de pagamento, o bot <strong>Isa</strong> instrui: <em>"Toque em Enviar cobrança → Link de Pagamento"</em>. Esse caminho <strong>não existe no app</strong>. "Enviar cobrança" e "Link de Pagamento" são dois produtos separados, com fluxos completamente distintos.</p>
-      <p>Um usuário que segue a instrução ao pé da letra clica em "Enviar cobrança", cai no fluxo de <strong>Cobrança Online</strong> — que exige preenchimento de 6 campos (cliente, descrição, vencimento, meios de pagamento, desconto, multa/juros) — e nunca encontra o "Link de Pagamento" que o bot prometeu.</p>
+      <p>Um usuário que segue a instrução ao pé da letra clica em "Enviar cobrança", cai no fluxo de <strong>Cobrança Online</strong>, que exige preenchimento de 6 campos (cliente, descrição, vencimento, meios de pagamento, desconto, multa/juros) e nunca encontra o "Link de Pagamento" que o bot prometeu.</p>
       <div class="finding-implication">
         <span class="imp-label">Implicação para o experimento</span>
-        O fluxo de ativação guiado deve usar nomenclatura idêntica à UI atual. Qualquer divergência replica exatamente o problema identificado — e destrói a confiança do usuário no produto no momento mais crítico da jornada.
+        O fluxo de ativação guiado deve usar nomenclatura idêntica à UI atual. Qualquer divergência replica exatamente o problema identificado e destrói a confiança do usuário no produto no momento mais crítico da jornada.
       </div>
     </div>
   </div>
@@ -610,7 +608,7 @@
       <p>Tempo observado do primeiro toque até a confirmação da cobrança: <strong>~2 minutos</strong>, com pelo menos 3 decisões de configuração que um novo usuário não sabe como responder.</p>
       <div class="finding-implication">
         <span class="imp-label">Implicação para o experimento</span>
-        A tela em branco pós-cadastro não é o único obstáculo. O próprio fluxo de criação de cobrança tem fricção que precisaria ser endereçada em paralelo — ou o onboarding guiado leva o usuário até a porta certa, mas a porta ainda está travada.
+        A tela em branco pós-cadastro não é o único obstáculo. O próprio fluxo de criação de cobrança tem fricção que precisaria ser endereçada em paralelo. O onboarding guiado leva o usuário até a porta certa, mas a porta ainda está travada.
       </div>
     </div>
   </div>
@@ -642,10 +640,10 @@
       <div class="finding-severity low">ATRITO BAIXO</div>
     </div>
     <div class="finding-body">
-      <p>Ao confirmar a cobrança, a tela de sucesso inclui um widget de avaliação de estrelas com a pergunta <em>"O que você acha de Gestão de Cobranças?"</em> — imediatamente após a primeira cobrança criada. O usuário ainda não usou o produto o suficiente para ter uma opinião formada, e o NPS nesse momento captura satisfação com o fluxo de criação, não com o produto.</p>
+      <p>Ao confirmar a cobrança, a tela de sucesso inclui um widget de avaliação de estrelas com a pergunta <em>"O que você acha de Gestão de Cobranças?"</em>, imediatamente após a primeira cobrança criada. O usuário ainda não usou o produto o suficiente para ter uma opinião formada, e o NPS nesse momento captura satisfação com o fluxo de criação, não com o produto.</p>
       <div class="finding-implication">
         <span class="imp-label">Implicação para o experimento</span>
-        O momento ideal de NPS para novos usuários é D7–D14, após a primeira transação aprovada pelo cliente — não no momento da criação. Esse é um ajuste de baixo esforço e alto impacto na qualidade do sinal de feedback.
+        O momento ideal de NPS para novos usuários é D7–D14, após a primeira transação aprovada pelo cliente, não no momento da criação. Esse é um ajuste de baixo esforço e alto impacto na qualidade do sinal de feedback.
       </div>
     </div>
   </div>
@@ -664,12 +662,12 @@
     <div class="fs-row">
       <div class="fs-num">#1</div>
       <div class="fs-finding">Desalinhamento bot × UI</div>
-      <div class="fs-impact">Reforça a hipótese central — usuário com ajuda ainda erra o caminho. O fluxo guiado deve usar nomenclatura exata do app.</div>
+      <div class="fs-impact">Reforça a hipótese central: usuário com ajuda ainda erra o caminho. O fluxo guiado deve usar nomenclatura exata do app.</div>
     </div>
     <div class="fs-row">
       <div class="fs-num">#2</div>
       <div class="fs-finding">Fluxo de cobrança complexo</div>
-      <div class="fs-impact">Amplia o escopo do problema — ativação guiada resolve a desorientação, mas o fluxo de criação precisa de simplificação paralela.</div>
+      <div class="fs-impact">Amplia o escopo do problema: ativação guiada resolve a desorientação, mas o fluxo de criação precisa de simplificação paralela.</div>
     </div>
     <div class="fs-row">
       <div class="fs-num">#3</div>
@@ -683,7 +681,7 @@
 <!-- 04c — SINAIS INTERNOS + BENCHMARK COMPETITIVO -->
 <div class="section">
   <div class="section-label"><span class="num">04c</span> Sinais internos e benchmark competitivo</div>
-  <h2>O que a própria empresa sinaliza — e o que os concorrentes fazem diferente</h2>
+  <h2>O que a própria empresa sinaliza e o que os concorrentes fazem diferente</h2>
 
   <h3 style="margin-bottom:12px">Sinais internos da CloudWalk</h3>
   <p>Antes de propor uma solução, vale olhar o que a própria empresa comunica publicamente como prioridade. Três sinais apontam para o mesmo problema:</p>
@@ -692,7 +690,7 @@
     <div class="signal-icon">VAGA ABERTA</div>
     <div class="signal-body">
       <strong>Growth &amp; Lifecycle Analyst — CloudWalk (2024)</strong>
-      A vaga descreve explicitamente responsabilidade por "estruturar, escalar e governar o ecossistema de dados de marketing e produto, definindo estratégias de mensuração e melhorando qualidade de dados". O título <em>Lifecycle</em> indica foco em jornada do usuário — exatamente o gap identificado neste case. A vaga para <strong>Martech Analyst</strong> aberta na mesma janela reforça: a empresa está construindo agora a infraestrutura que vai resolver esse problema.
+      A vaga descreve explicitamente responsabilidade por "estruturar, escalar e governar o ecossistema de dados de marketing e produto, definindo estratégias de mensuração e melhorando qualidade de dados". O título <em>Lifecycle</em> indica foco em jornada do usuário, exatamente o gap identificado neste case. A vaga para <strong>Martech Analyst</strong> aberta na mesma janela reforça: a empresa está construindo agora a infraestrutura que vai resolver esse problema.
     </div>
   </div>
 
@@ -700,7 +698,7 @@
     <div class="signal-icon">NEWSROOM</div>
     <div class="signal-body">
       <strong>Luis Silva, CEO — InfinitePay Newsroom, março/2026</strong>
-      "Nossos agentes não auxiliam funcionários, eles executam o trabalho. E agora, com o JIM.com, executam o trabalho para os nossos clientes também." O JIM.com foi construído exatamente para eliminar a curva de aprendizado: <em>"Não tem painel. Não tem manual. Não tem curva de aprendizado. O agente toca o negócio e o empreendedor toca a vida."</em> — essa é a direção estratégica da empresa. O gap de ativação pós-cadastro no app é a contradição mais visível em relação a essa visão declarada.
+      "Nossos agentes não auxiliam funcionários, eles executam o trabalho. E agora, com o JIM.com, executam o trabalho para os nossos clientes também." O JIM.com foi construído exatamente para eliminar a curva de aprendizado: <em>"Não tem painel. Não tem manual. Não tem curva de aprendizado. O agente toca o negócio e o empreendedor toca a vida."</em> Essa é a direção estratégica da empresa. O gap de ativação pós-cadastro no app é a contradição mais visível em relação a essa visão declarada.
     </div>
   </div>
 
@@ -708,7 +706,7 @@
     <div class="signal-icon">PRODUTO</div>
     <div class="signal-body">
       <strong>50% da receita em 2024 veio de produtos lançados nos últimos 2 anos</strong>
-      Isso confirma que a base de lojistas existentes está sendo monetizada com novos produtos — o que só funciona se o lojista passou pela ativação inicial. Melhorar D7 é pré-requisito direto para que a máquina de cross-sell continue funcionando.
+      Isso confirma que a base de lojistas existentes está sendo monetizada com novos produtos, o que só funciona se o lojista passou pela ativação inicial. Melhorar D7 é pré-requisito direto para que a máquina de cross-sell continue funcionando.
     </div>
   </div>
 
@@ -727,25 +725,25 @@
     <tbody>
       <tr class="ip-row">
         <td>Tela pós-cadastro</td>
-        <td>Dashboard genérico — saldo R$ 0,00, menu por funcionalidade, sem CTA de próximo passo</td>
+        <td>Dashboard genérico: saldo R$ 0,00, menu por funcionalidade, sem CTA de próximo passo</td>
         <td class="mid-cell">Dashboard com banner de boas-vindas e link direto para "criar link de pagamento" como primeira ação sugerida</td>
         <td class="ok-cell">Onboarding guiado por tipo de negócio (presencial / online) antes de exibir o dashboard</td>
       </tr>
       <tr>
         <td>Nomenclatura no suporte</td>
-        <td class="bad-cell">Bot usa "Enviar cobrança → Link de Pagamento" — caminho inexistente no app (achado #1)</td>
+        <td class="bad-cell">Bot usa "Enviar cobrança → Link de Pagamento", caminho inexistente no app (achado #1)</td>
         <td class="ok-cell">Documentação e suporte usam os mesmos termos da UI</td>
         <td class="ok-cell">Termos consistentes entre app, site e suporte</td>
       </tr>
       <tr>
         <td>Complexidade do 1º fluxo</td>
         <td class="mid-cell">"Enviar cobrança": 2 telas de apresentação + 6 campos configuráveis (~2 min)</td>
-        <td class="ok-cell">"Link de pagamento": valor + confirmar — 2 campos, &lt;30 segundos</td>
+        <td class="ok-cell">"Link de pagamento": valor + confirmar, 2 campos, &lt;30 segundos</td>
         <td class="mid-cell">Fluxo guiado por tipo, depois formulário simplificado (~1 min)</td>
       </tr>
       <tr>
         <td>Momento do NPS</td>
-        <td class="bad-cell">Imediatamente após criar a 1ª cobrança — antes de qualquer uso real</td>
+        <td class="bad-cell">Imediatamente após criar a 1ª cobrança, antes de qualquer uso real</td>
         <td class="mid-cell">Após a 1ª transação aprovada</td>
         <td class="ok-cell">D7–D14 por e-mail, fora do fluxo de uso</td>
       </tr>
@@ -760,7 +758,7 @@
 
   <div class="callout amber">
     <div class="callout-label">Leitura do benchmark</div>
-    <p>A InfinitePay tem o produto mais rápido de cadastrar e o maior ecossistema de funcionalidades — mas perde para Stone e PagSeguro no momento de orientar o novo usuário para a primeira ação de valor. <strong>O gap não é de produto: é de experiência de ativação.</strong> E esse é exatamente o gap que este experimento endereça.</p>
+    <p>A InfinitePay tem o produto mais rápido de cadastrar e o maior ecossistema de funcionalidades, mas perde para Stone e PagSeguro no momento de orientar o novo usuário para a primeira ação de valor. <strong>O gap não é de produto: é de experiência de ativação.</strong> E esse é exatamente o gap que este experimento endereça.</p>
   </div>
 </div>
 
@@ -769,7 +767,7 @@
   <div class="section-label"><span class="num">05</span> Diagnóstico</div>
   <h2>Perguntas antes de qualquer solução</h2>
 
-  <p>Mesmo com a hipótese definida, a primeira semana seria de dados — não de design. Três perguntas guiam essa fase:</p>
+  <p>Mesmo com a hipótese definida, a primeira semana seria de dados, não de design. Três perguntas guiam essa fase:</p>
 
   <div class="hypothesis-grid">
     <div class="hypothesis-card">
@@ -777,7 +775,7 @@
         <div class="hyp-num">P1</div>
         <div class="hyp-title">Onde exatamente acontece o abandono?</div>
       </div>
-      <p class="hyp-body">O usuário sai imediatamente após o cadastro sem nenhuma interação? Ou explora o dashboard e abandona ao tentar uma ação? São problemas distintos — um é desorientação, o outro é fricção de execução.</p>
+      <p class="hyp-body">O usuário sai imediatamente após o cadastro sem nenhuma interação? Ou explora o dashboard e abandona ao tentar uma ação? São problemas distintos: um é desorientação, o outro é fricção de execução.</p>
       <div class="hyp-tags">
         <div class="tag-pill">Funil por evento no Amplitude</div>
         <div class="tag-pill">Gravações de sessão</div>
@@ -812,7 +810,7 @@
 
   <div class="callout">
     <div class="callout-label">Validado com uso real</div>
-    <p>O hands-on no produto confirmou os três eixos acima com achados concretos — ver <strong>Seção 05b</strong>. O desalinhamento entre o bot de suporte e a nomenclatura real do app foi o achado mais relevante: um usuário com ajuda explícita ainda erra o caminho. Sem ajuda, a desorientação é total.</p>
+    <p>O hands-on no produto confirmou os três eixos acima com achados concretos (ver <strong>Seção 04b</strong>). O desalinhamento entre o bot de suporte e a nomenclatura real do app foi o achado mais relevante: um usuário com ajuda explícita ainda erra o caminho. Sem ajuda, a desorientação é total.</p>
   </div>
 </div>
 
@@ -822,13 +820,13 @@
   <div class="section-label"><span class="num">06</span> Hipótese central</div>
   <h2>O app mobile não orienta o novo lojista no momento mais crítico</h2>
 
-  <p>Após o cadastro, o usuário provavelmente encontra um dashboard vazio — saldo zerado, menu com funcionalidades, sem indicação do próximo passo. É uma interface construída para quem já transaciona, não para quem acabou de entrar.</p>
+  <p>Após o cadastro, o usuário provavelmente encontra um dashboard vazio: saldo zerado, menu com funcionalidades, sem indicação do próximo passo. É uma interface construída para quem já transaciona, não para quem acabou de entrar.</p>
 
-  <p>A realidade do lojista nesse momento é concreta: <em>"Quero cobrar do meu cliente hoje."</em> Mas o caminho até gerar um Link de Pagamento ou ativar o InfiniteTap está organizado por <strong>funcionalidade</strong> — não por <strong>tarefa</strong>. Isso cria fricção invisível: o usuário não encontra o próximo passo óbvio, perde confiança e abandona.</p>
+  <p>A realidade do lojista nesse momento é concreta: <em>"Quero cobrar do meu cliente hoje."</em> Mas o caminho até gerar um Link de Pagamento ou ativar o InfiniteTap está organizado por <strong>funcionalidade</strong>, não por <strong>tarefa</strong>. Isso cria fricção invisível: o usuário não encontra o próximo passo óbvio, perde confiança e abandona.</p>
 
   <div class="callout">
     <div class="callout-label">Hipótese</div>
-    <p>Se substituirmos a tela em branco pós-cadastro por um <strong>fluxo de onboarding orientado ao objetivo do lojista</strong> — que pergunta como ele vende e direciona para a ação mais relevante — a taxa de primeira transação em D7 vai aumentar. Compatível com a evidência de que empresas PLG que personalizam o onboarding por perfil de uso melhoram a taxa de ativação em <strong>20–40% ao longo de 6–12 meses</strong>.<sup>[2]</sup></p>
+    <p>Se substituirmos a tela em branco pós-cadastro por um <strong>fluxo de onboarding orientado ao objetivo do lojista</strong>, que pergunta como ele vende e direciona para a ação mais relevante, a taxa de primeira transação em D7 vai aumentar. Compatível com a evidência de que empresas PLG que personalizam o onboarding por perfil de uso melhoram a taxa de ativação em <strong>20–40% ao longo de 6–12 meses</strong>.<sup>[2]</sup></p>
   </div>
 
   <p></p>
@@ -883,7 +881,7 @@
     </div>
   </div>
 
-  <p>O controle reproduz o estado atual: dashboard genérico idêntico para novos e antigos lojistas, sem orientação de próximo passo. A variante reorganiza a primeira sessão em torno do objetivo do lojista — não das funcionalidades do produto.</p>
+  <p>O controle reproduz o estado atual: dashboard genérico idêntico para novos e antigos lojistas, sem orientação de próximo passo. A variante reorganiza a primeira sessão em torno do objetivo do lojista, não das funcionalidades do produto.</p>
 </div>
 
 
@@ -901,14 +899,14 @@
       <div class="exp-label">Controle</div>
       <div class="exp-value">
         <strong>Experiência atual</strong>
-        Após o cadastro, o lojista cai no dashboard padrão — saldo zerado, menu por funcionalidade (Conta / Vendas / Moedas), sem nenhum prompt de próximo passo. Precisa descobrir por conta própria como fazer a primeira venda.
+        Após o cadastro, o lojista cai no dashboard padrão: saldo zerado, menu por funcionalidade (Conta / Vendas / Moedas), sem nenhum prompt de próximo passo. Precisa descobrir por conta própria como fazer a primeira venda.
       </div>
     </div>
     <div class="exp-row">
       <div class="exp-label">Variante</div>
       <div class="exp-value">
         <strong>Fluxo de ativação guiado</strong>
-        Após o cadastro, o lojista vê uma tela de boas-vindas com uma pergunta sobre como vende (presencial / link / loja online). Com base na resposta, o app destaca uma única ação primária com CTA claro. O fluxo termina com o lojista tendo gerado seu primeiro Link de Pagamento ou ativado o InfiniteTap — e visto uma confirmação de que está pronto para vender.
+        Após o cadastro, o lojista vê uma tela de boas-vindas com uma pergunta sobre como vende (presencial / link / loja online). Com base na resposta, o app destaca uma única ação primária com CTA claro. O fluxo termina com o lojista tendo gerado seu primeiro Link de Pagamento ou ativado o InfiniteTap, com uma confirmação de que está pronto para vender.
       </div>
     </div>
     <div class="exp-row">
@@ -917,7 +915,7 @@
     </div>
     <div class="exp-row">
       <div class="exp-label">Público</div>
-      <div class="exp-value">Apenas novos usuários — primeira sessão após criação da conta no app mobile. Usuários existentes e onboardings via parceiro/revendedor excluídos para evitar contaminação.</div>
+      <div class="exp-value">Apenas novos usuários: primeira sessão após criação da conta no app mobile. Usuários existentes e onboardings via parceiro/revendedor excluídos para evitar contaminação.</div>
     </div>
     <div class="exp-row">
       <div class="exp-label">Duração</div>
@@ -932,7 +930,7 @@
   <div class="section-label"><span class="num">09</span> Instrumentação</div>
   <h2>Tracking plan do experimento</h2>
 
-  <p>Um experimento mal instrumentado produz dados que não se pode confiar. A tabela abaixo define os eventos necessários — cada um com trigger, propriedades-chave e tipo de evento.</p>
+  <p>Um experimento mal instrumentado produz dados que não se pode confiar. A tabela abaixo define os eventos necessários, cada um com trigger, propriedades-chave e tipo de evento.</p>
 
   <table class="track-table">
     <thead>
@@ -983,13 +981,13 @@
     </tbody>
   </table>
 
-  <p><strong>Identity resolution:</strong> anonymous_id → user_id no signup, account_id no KYC. Stitching no CDP via <code>identify()</code> encadeado — garante que o comportamento pré e pós-login seja unificado no mesmo perfil.</p>
+  <p><strong>Identity resolution:</strong> anonymous_id → user_id no signup, account_id no KYC. Stitching no CDP via <code>identify()</code> encadeado, garantindo que o comportamento pré e pós-login seja unificado no mesmo perfil.</p>
 
-  <p><strong>Feature flag mechanics:</strong> exposure event disparado no render do prompt, não no pageview. Bucket persistido por user_id. SRM (sample ratio mismatch) verificado diariamente nos primeiros 3 dias — desvio &gt;5% entre os grupos indica problema de implementação e o experimento deve ser pausado.</p>
+  <p><strong>Feature flag mechanics:</strong> exposure event disparado no render do prompt, não no pageview. Bucket persistido por user_id. SRM (sample ratio mismatch) verificado diariamente nos primeiros 3 dias. Um desvio &gt;5% entre os grupos indica problema de implementação e o experimento deve ser pausado.</p>
 
   <p><strong>Stack assumido:</strong> Segment ou RudderStack (coleta) → Amplitude (análise comportamental + funnel) → Snowflake (warehouse) → LaunchDarkly ou Eppo (feature flags + assignment) → Braze (comunicações pós-ativação).</p>
 
-  <p><strong>Qualidade do dado:</strong> schema validation no ingestion, DLQ para eventos malformados, consent gate LGPD — usuários que não aceitaram coleta de dados comportamentais são excluídos do experimento.</p>
+  <p><strong>Qualidade do dado:</strong> schema validation no ingestion, DLQ para eventos malformados, consent gate LGPD. Usuários que não aceitaram coleta de dados comportamentais são excluídos do experimento.</p>
 </div>
 
 
@@ -1007,20 +1005,20 @@
     <div class="metric-card">
       <div class="metric-label">Métrica secundária</div>
       <div class="metric-primary">Time-to-first-tx</div>
-      <div class="metric-desc">Mediana de horas entre o cadastro e o primeiro Link gerado ou InfiniteTap ativado — mede velocidade de chegada ao valor</div>
+      <div class="metric-desc">Mediana de horas entre o cadastro e o primeiro Link gerado ou InfiniteTap ativado, medindo velocidade de chegada ao valor</div>
     </div>
     <div class="metric-card">
       <div class="metric-label">Indicador antecipado</div>
       <div class="metric-primary">Conclusão do fluxo</div>
-      <div class="metric-desc">% dos usuários da variante que respondem a pergunta de perfil e chegam ao CTA — valida o fluxo em si antes de medir o resultado final</div>
+      <div class="metric-desc">% dos usuários da variante que respondem a pergunta de perfil e chegam ao CTA, validando o fluxo em si antes de medir o resultado final</div>
     </div>
   </div>
 
-  <p>Métricas de saúde (monitorar, não otimizar): retenção D30, adoção de segundo produto, NPS em D14. Guardrails: nenhuma dessas pode cair na variante — se caírem, o experimento é pausado independentemente do resultado em D7.</p>
+  <p>Métricas de saúde (monitorar, não otimizar): retenção D30, adoção de segundo produto, NPS em D14. Guardrails: nenhuma dessas pode cair na variante. Se caírem, o experimento é pausado independentemente do resultado em D7.</p>
 
   <div class="callout blue">
     <div class="callout-label">Efeito mínimo detectável (MDE)</div>
-    <p>Baseado no que é comercialmente relevante, não apenas estatisticamente significativo. Produtos PLG operam com taxa de ativação mediana de 34,6%.<sup>[3]</sup> Detectar uma melhora de 5 pontos percentuais (para ~40%) exigiria aproximadamente 1.500–2.000 usuários por braço com 80% de poder estatístico — assumption a validar com o volume real de novos cadastros diários na semana de diagnóstico. A janela de 168 horas (7 dias) identificada pelo Mixpanel como crítica para fintechs PLG<sup>[4]</sup> sugere que D7 é a janela certa — D3 pode ser monitorado como indicador antecipado de velocidade.</p>
+    <p>Baseado no que é comercialmente relevante, não apenas estatisticamente significativo. Produtos PLG operam com taxa de ativação mediana de 34,6%.<sup>[3]</sup> Detectar uma melhora de 5 pontos percentuais (para ~40%) exigiria aproximadamente 1.500–2.000 usuários por braço com 80% de poder estatístico, número a validar com o volume real de novos cadastros diários na semana de diagnóstico. A janela de 168 horas (7 dias) identificada pelo Mixpanel como crítica para fintechs PLG<sup>[4]</sup> confirma que D7 é a janela certa. D3 pode ser monitorado como indicador antecipado de velocidade.</p>
   </div>
 </div>
 
@@ -1041,15 +1039,15 @@
     </div>
     <div class="decision-row">
       <div class="decision-if amber">INVESTIGAR</div>
-      <div class="decision-text">Conclusão do fluxo baixa (&lt;40%). Os lojistas estão descartando a tela de boas-vindas antes de responder. O problema é de formato — modal vs. inline vs. tela cheia — não de conteúdo. Testar o formato antes de revisar a pergunta ou as opções.</div>
+      <div class="decision-text">Conclusão do fluxo baixa (&lt;40%). Os lojistas estão descartando a tela de boas-vindas antes de responder. O problema é de formato (modal vs. inline vs. tela cheia), não de conteúdo. Testar o formato antes de revisar a pergunta ou as opções.</div>
     </div>
     <div class="decision-row">
       <div class="decision-if red">DESCARTAR</div>
-      <div class="decision-text">Sem ganho em Ativação D7 E queda em retenção D30. O fluxo guiado está criando falsas partidas — o lojista gera um Link mas não tem um cliente real para enviar. Sinaliza problema upstream: o canal de aquisição está trazendo lojistas de baixa intenção. A correção é anterior ao onboarding.</div>
+      <div class="decision-text">Sem ganho em Ativação D7 E queda em retenção D30. O fluxo guiado está criando falsas partidas: o lojista gera um Link, mas não tem um cliente real para enviar. Isso sinaliza um problema upstream: o canal de aquisição está trazendo lojistas de baixa intenção. A correção precisa acontecer antes do onboarding.</div>
     </div>
   </div>
 
-  <p>O cenário "Descartar" é tão valioso quanto "Lançar" — ele redireciona o investimento para a etapa correta do funil em vez de continuar otimizando a errada.</p>
+  <p>O cenário "Descartar" é tão valioso quanto "Lançar". Ele redireciona o investimento para a etapa correta do funil em vez de continuar otimizando a errada.</p>
 </div>
 
 
@@ -1062,7 +1060,7 @@
     <div class="timeline-item">
       <div class="timeline-week">Semana 1</div>
       <div class="timeline-title">Diagnóstico — aprofundar hands-on e levantar baseline</div>
-      <p class="timeline-desc">Hands-on já iniciado (ver Seção 04b) — aprofundar com conta PJ e repetir os fluxos em Stone e PagSeguro para comparação estruturada (ver Seção 04c). Levantar taxa de Ativação D7 basal do app mobile, segmentada por fonte de aquisição (orgânico vs pago) e por perfil (PF vs PJ). Mapear o funil cadastro → primeira ação no Amplitude e revisar gravações de sessão para entender comportamento em blank state. Alinhar definições de métricas e plano de instrumentação com os times de produto e dados.</p>
+      <p class="timeline-desc">Hands-on já iniciado (ver Seção 04b). Aprofundar com conta PJ e repetir os fluxos em Stone e PagSeguro para comparação estruturada (ver Seção 04c). Levantar taxa de Ativação D7 basal do app mobile, segmentada por fonte de aquisição (orgânico vs pago) e por perfil (PF vs PJ). Mapear o funil cadastro → primeira ação no Amplitude e revisar gravações de sessão para entender o comportamento em blank state. Alinhar definições de métricas e plano de instrumentação com os times de produto e dados.</p>
     </div>
     <div class="timeline-item">
       <div class="timeline-week">Semana 2</div>
@@ -1072,7 +1070,7 @@
     <div class="timeline-item">
       <div class="timeline-week">Semanas 3–4</div>
       <div class="timeline-title">Experimento rodando</div>
-      <p class="timeline-desc">Live apenas para novos cadastros. Monitorar SRM e erros técnicos diariamente. Não consultar a métrica primária até a data de avaliação pré-definida — evitar peeking e paradas prematuras.</p>
+      <p class="timeline-desc">Live apenas para novos cadastros. Monitorar SRM e erros técnicos diariamente. Não consultar a métrica primária até a data de avaliação pré-definida, para evitar peeking e paradas prematuras.</p>
     </div>
     <div class="timeline-item">
       <div class="timeline-week">Semana 5</div>
@@ -1082,7 +1080,7 @@
     <div class="timeline-item">
       <div class="timeline-week">Semana 6</div>
       <div class="timeline-title">Decisão + próximo passo</div>
-      <p class="timeline-desc">Apresentação dos resultados para stakeholders com o framework de decisão. Lançar, iterar ou redirecionar. Definir a próxima pergunta — o processo não para independentemente do resultado.</p>
+      <p class="timeline-desc">Apresentação dos resultados para stakeholders com o framework de decisão. Lançar, iterar ou redirecionar. Definir a próxima pergunta. O processo não para independentemente do resultado.</p>
     </div>
   </div>
 </div>
@@ -1116,7 +1114,7 @@
     </div>
     <div class="risk-item">
       <div class="risk-name">Viés de confirmação na análise</div>
-      <div class="risk-mitigation">Pré-registrar métrica primária, MDE e data de avaliação antes do lançamento. Nenhuma mudança de métrica após o início — sem peeking.</div>
+      <div class="risk-mitigation">Pré-registrar métrica primária, MDE e data de avaliação antes do lançamento. Nenhuma mudança de métrica após o início. Sem peeking..</div>
       <div class="risk-level low">BAIXO</div>
     </div>
   </div>
@@ -1130,21 +1128,21 @@
 
   <p>O modelo PLG da InfinitePay depende de lojistas que ficam, usam mais produtos e geram mais receita ao longo do tempo. <strong>Ativação é o portão de entrada para tudo isso.</strong></p>
 
-  <p>Usuários que completam a ativação convertem para produtos pagos com taxa <strong>3–5× maior</strong> e retêm por <strong>2–4× mais tempo</strong> do que os que não completam.<sup>[5]</sup> No contexto InfinitePay, isso significa: mais MDR, mais antecipação, mais crédito — cada linha composta sobre o mesmo lojista.</p>
+  <p>Usuários que completam a ativação convertem para produtos pagos com taxa 3 a 5 vezes maior e retêm por 2 a 4 vezes mais tempo do que os que não completam.<sup>[5]</sup> No contexto InfinitePay, isso significa: mais MDR, mais antecipação e mais crédito, cada linha composta sobre o mesmo lojista.</p>
 
-  <p>Com 6,3 milhões de lojistas ativos e crescimento acelerado, o app mobile é a principal superfície de ativação da InfinitePay. Um experimento bem desenhado — mesmo que a hipótese específica esteja errada — produz conhecimento acionável sobre onde o gap real está. <strong>Esse é o entregável real deste exercício: um processo rigoroso para transformar sinais ambíguos em decisões.</strong></p>
+  <p>Com 6,3 milhões de lojistas ativos e crescimento acelerado, o app mobile é a principal superfície de ativação da InfinitePay. Um experimento bem desenhado, mesmo que a hipótese específica esteja errada, produz conhecimento acionável sobre onde o gap real está. Esse é o entregável real deste exercício: um processo rigoroso para transformar sinais ambíguos em decisões.</p>
 </div>
 
 <hr>
 
 <!-- FOOTNOTES -->
 <div class="footnotes">
-  <div class="footnote-item"><div class="footnote-num">[1]</div><div>Netcore Cloud, "Reduce Onboarding Drop-off for Fintech Apps", 2025 — 40–50% de abandono durante KYC; 20%+ pós-KYC antes da ativação.</div></div>
-  <div class="footnote-item"><div class="footnote-num">[2]</div><div>Userpilot, "User Activation Rate Benchmark Report 2024" + Reforge Product Analytics Guide — onboarding orientado por perfil de uso melhora ativação em 20–40% ao longo de 6–12 meses em produtos PLG. Reforge: reforge.com/blog/activation.</div></div>
-  <div class="footnote-item"><div class="footnote-num">[3]</div><div>Userpilot, "User Activation Rate Benchmark Report 2024" — taxa média de ativação PLG: 34,6%; empresas best-in-class: 60–70% em D30.</div></div>
-  <div class="footnote-item"><div class="footnote-num">[4]</div><div>Mixpanel Product Benchmarks Report 2024 — janela crítica de conversão de 168 horas (7 dias) para fintechs PLG. mixpanel.com/blog/product-benchmarks.</div></div>
-  <div class="footnote-item"><div class="footnote-num">[5]</div><div>OpenView Ventures, SaaS Benchmarks Report 2024 — usuários que completam ativação convertem para produtos pagos com taxa 3–5× maior e retêm 2–4× mais tempo. openviewpartners.com/reports.</div></div>
-  <div class="footnote-item"><div class="footnote-num">[6]</div><div>CloudWalk Newsroom, março/2026 — "CloudWalk alcança R$ 7,16 bilhões em receita anualizada." infinitepay.io/newsroom. Vaga de Growth &amp; Lifecycle Analyst e Martech Analyst: cloudwalk.io/careers (2024).</div></div>
+  <div class="footnote-item"><div class="footnote-num">[1]</div><div>Netcore Cloud, "Reduce Onboarding Drop-off for Fintech Apps", 2025: 40–50% de abandono durante KYC; 20%+ pós-KYC antes da ativação.</div></div>
+  <div class="footnote-item"><div class="footnote-num">[2]</div><div>Userpilot, "User Activation Rate Benchmark Report 2024" + Reforge Product Analytics Guide: onboarding orientado por perfil de uso melhora ativação em 20–40% ao longo de 6–12 meses em produtos PLG. Reforge: reforge.com/blog/activation.</div></div>
+  <div class="footnote-item"><div class="footnote-num">[3]</div><div>Userpilot, "User Activation Rate Benchmark Report 2024": taxa média de ativação PLG: 34,6%; empresas best-in-class: 60–70% em D30.</div></div>
+  <div class="footnote-item"><div class="footnote-num">[4]</div><div>Mixpanel Product Benchmarks Report 2024: janela crítica de conversão de 168 horas (7 dias) para fintechs PLG. mixpanel.com/blog/product-benchmarks.</div></div>
+  <div class="footnote-item"><div class="footnote-num">[5]</div><div>OpenView Ventures, SaaS Benchmarks Report 2024: usuários que completam ativação convertem para produtos pagos com taxa 3–5× maior e retêm 2–4× mais tempo. openviewpartners.com/reports.</div></div>
+  <div class="footnote-item"><div class="footnote-num">[6]</div><div>CloudWalk Newsroom, março/2026: "CloudWalk alcança R$ 7,16 bilhões em receita anualizada." infinitepay.io/newsroom. Vaga de Growth &amp; Lifecycle Analyst e Martech Analyst: cloudwalk.io/careers (2024).</div></div>
 </div>
 
 <div class="footer" style="margin-top:32px">
